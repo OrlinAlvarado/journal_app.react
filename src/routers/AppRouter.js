@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { AuthRouter } from './AuthRouter'
 import { useDispatch } from 'react-redux';
 import {
-    BrowserRouter as Router,
     Switch,
-    Redirect
+    Redirect,
+    HashRouter
   } from "react-router-dom";
 import { firebase } from '../firebase/firabase-config'
 import { JournalScreen } from '../components/journal/JournalScreen'
@@ -45,7 +45,7 @@ export const AppRouter = () => {
         )
     }
     return (
-        <Router>
+        <HashRouter basename="/">
             <div>
             <Switch>
                 <PublicRoute
@@ -64,6 +64,6 @@ export const AppRouter = () => {
             </Switch>
            
         </div>
-        </Router>
+        </HashRouter>
     )
 }

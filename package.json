@@ -1,5 +1,6 @@
 {
   "name": "journal-app",
+  "homepage": "https://orlinalvarado.github.io/journal_app.react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
