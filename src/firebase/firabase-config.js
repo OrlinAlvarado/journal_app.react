@@ -2,16 +2,24 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAi5XmdYxMQkRvNTFJO-h1tfWAAfjq5oes",
-    authDomain: "react-app-cursos-d0bc1.firebaseapp.com",
-    databaseURL: "https://react-app-cursos-d0bc1.firebaseio.com",
-    projectId: "react-app-cursos-d0bc1",
-    storageBucket: "react-app-cursos-d0bc1.appspot.com",
-    messagingSenderId: "97306439018",
-    appId: "1:97306439018:web:bd40042e037ed840550913"
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASEURL,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID
 };
 
+// if( process.env.NODE_ENV === 'test'){
+//     //testing
+//     firebase.initializeApp(firebaseConfigTesting);
+// } else {
+//     //dev/prod
+//     firebase.initializeApp(firebaseConfig);
+// }
 
 firebase.initializeApp(firebaseConfig);
 
